@@ -21,3 +21,33 @@
 
 en:
   hello: "Hello world"
+  static_pages:
+    home:
+      welcome: "Welcome to the Sample App"
+      text1: "This is the home page for the"
+      text2: "sample application."
+  layouts:
+    footer:
+      txt1: "The"
+      txt2: "by"
+      author_book: "Michael Hartl"
+      about: "About"
+      contact: "Contact"
+      news: "News"
+  home: "Home"
+  help: "Help"
+  logo_text: "Sample App"
+  rails_tut: "Ruby on Rails Tutorial"
+
+  login: "Log in"
+  signup: "Sign up now!"
+  signup_title: "Sign up"
+  signup_para: "This will be a signup page for new users."
+
+  users:
+    new:
+      form_sub: "Create my account"
+    create:
+      signup_success: "Welcome to Rails Sample App"
+      signup_fail: "Opps ! Errors occurs while creating new User"
+    pwd_confirm: "Confirmation"

@@ -21,3 +21,24 @@
 
 en:
   hello: "Hello world"
+
+  welcome: "Welcome to the Sample App"
+  rails_tut: "Ruby on Rails Tutorial"
+  author_book: "Michael Hartl"
+
+  about: "About"
+  contact: "Contact"
+  home: "Home"
+  home_text1: "This is the home page for the"
+  home_text2: "sample application."
+
+  footer_txt1: "The"
+  footer_txt2: "by"
+
+  help: "Help"
+  news: "News"
+  logo_text: "Sample App"
+
+  signup: "Sign up now!"
+  signup_title: "Sign up"
+  signup_para: "This will be a signup page for new users."

@@ -43,3 +43,11 @@ en:
   signup: "Sign up now!"
   signup_title: "Sign up"
   signup_para: "This will be a signup page for new users."
+
+  users:
+    new:
+      form_sub: "Create my account"
+    create:
+      signup_success: "Welcome to Rails Sample App"
+      signup_fail: "Opps ! Errors occurs while creating new User"
+    pwd_confirm: "Confirmation"

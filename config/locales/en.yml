@@ -36,6 +36,11 @@ en:
       news: "News"
   home: "Home"
   help: "Help"
+  profile: "Profile"
+  setting: "Settings"
+  logout: "Logout"
+  user: "Users"
+  pwd_confirm: "Confirmation"
   logo_text: "Sample App"
   rails_tut: "Ruby on Rails Tutorial"
 
@@ -47,10 +52,24 @@ en:
   users:
     new:
       form_sub: "Create my account"
+    index:
+      all_users: "All Users"
     create:
       signup_success: "Welcome to Rails Sample App"
       signup_fail: "Opps ! Errors occurs while creating new User"
-    pwd_confirm: "Confirmation"
+    edit:
+      edit_users: "Edit User"
+      save: "Save changes"
+      change: "change"
+      user_not_found: "User not found"
+    update:
+      updated: "Profile updated"
+    destroy:
+      delete: "User deleted"
+    user:
+      del: "Delete"
+      del_confirm: "Are you sure?"
+    login_confirm: "Please log in"
   sessions:
     new:
       login: "Log in"

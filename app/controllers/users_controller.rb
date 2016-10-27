@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-  before_action :logged_in_user, except: :show
-  before_action :load_user, except: :index
+  before_action :logged_in_user, except: [:show, :new, :create]
+  before_action :load_user, except: [:index, :new, :create]
   before_action :correct_user, only: [:edit, :update]
   before_action :admin_user, only: :destroy
 
@@ -22,9 +22,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new user_params
     if @user.save
-      log_in @user
-      flash[:success] = t ".signup_success"
-      redirect_to @user
+      @user.send_activation_email
+      flash[:info] = t ".mail_activate_msg"
+      redirect_to root_path
     else
       flash.now[:danger] = t ".signup_fail"
       render :new
@@ -76,7 +76,7 @@ class UsersController < ApplicationController
   def load_user
     @user = User.find_by id: params[:id]
     if @user.nil?
-      flash[:danger] = t ".user_not_found"
+      flash.now[:danger] = t ".user_not_found"
       redirect_to users_path
     end
   end

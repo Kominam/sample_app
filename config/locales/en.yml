@@ -57,6 +57,7 @@ en:
     create:
       signup_success: "Welcome to Rails Sample App"
       signup_fail: "Opps ! Errors occurs while creating new User"
+      mail_activate_msg: "Please check your email to activate your account."
     edit:
       edit_users: "Edit User"
       save: "Save changes"
@@ -77,3 +78,5 @@ en:
       signup: "Sign up now!"
     create:
       invalid_login: "Invalid email/password combination"
+      mail_check: "Check your email for the activation link."
+      not_activate: "Account not activated."

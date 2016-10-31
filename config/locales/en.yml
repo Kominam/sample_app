@@ -76,7 +76,24 @@ en:
       login: "Log in"
       remember_me: "Remember me on this computer"
       signup: "Sign up now!"
+      forgot_password: "(forgot password)"
     create:
       invalid_login: "Invalid email/password combination"
       mail_check: "Check your email for the activation link."
       not_activate: "Account not activated."
+  password_resets:
+    new:
+      forget_pwd: "Forgot password"
+      submit: "Submit"
+    create:
+      email_sent_reset_pwd: "Email sent with password intructions."
+      email_not_found: "Email address not found."
+    edit:
+      reset_pwd: "Reset password"
+      pwd_updated: "Update password"
+      pwd_reset_confirm: "Confirmation"
+    update:
+      not_empty: "Can't be empty"
+      pwd_reset_success: "Password has been reset."
+    check_expiration:
+      expired_email: "Password reset has expired."

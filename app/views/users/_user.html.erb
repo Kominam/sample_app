@@ -4,5 +4,5 @@
   <% if current_user.admin? && !current_user?(user) %>
     | <%= link_to t(".del"), user, method: :delete,
       data: {confirm: t(".del_confirm")} %>
-  <% end %>
+<% end %>
 </li>

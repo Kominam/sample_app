@@ -1,0 +1,2 @@
+$('#comment').html("<%= j render @micropost.comments, micropost: @micropost, comment: @comment %>");
+$('#comment_content_<%= @micropost.id %>').val('')

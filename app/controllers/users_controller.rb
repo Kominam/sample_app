@@ -12,6 +12,8 @@ class UsersController < ApplicationController
   def show
     if @user.nil?
       render file: "public/404.html", status: 404, layout: false
+    else
+      @microposts = @user.microposts.paginate page: params[:page]
     end
   end
 
@@ -49,19 +51,23 @@ class UsersController < ApplicationController
     redirect_to users_path
   end
 
+  def following
+    @title = t ".following_tit"
+    @users = @user.following.paginate page: params[:page]
+    render :show_follow
+  end
+
+  def followers
+    @title = t ".follower_tit"
+    @users = @user.followers.paginate page: params[:page]
+    render :show_follow
+  end
+
   private
 
-    def user_params
-      params.require(:user).permit :name, :email, :password,
-                                   :password_confirmation
-    end
-
-  def logged_in_user
-    unless logged_in?
-      store_location
-      flash[:danger] = t ".login_confirm"
-      redirect_to login_path
-    end
+  def user_params
+    params.require(:user).permit :name, :email, :password,
+      :password_confirmation
   end
 
   def correct_user
@@ -76,7 +82,7 @@ class UsersController < ApplicationController
   def load_user
     @user = User.find_by id: params[:id]
     if @user.nil?
-      flash.now[:danger] = t ".user_not_found"
+      flash[:danger] = t ".user_not_found"
       redirect_to users_path
     end
   end

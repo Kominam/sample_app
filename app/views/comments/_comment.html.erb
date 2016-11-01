@@ -1,0 +1,12 @@
+<div class="microposts">
+  <li>
+    <%= link_to gravatar_for comment.user, size: 50 %>
+    <span class="content">
+      <%= comment.content %>
+    </span>
+    <span class="user"><%= link_to comment.user.name, comment.user %></span>
+    <span class="timestamps">
+      commented <%= time_ago_in_words(comment.created_at) %>
+    </span>
+  </li>
+</div>

@@ -26,6 +26,7 @@ en:
       welcome: "Welcome to the Sample App"
       text1: "This is the home page for the"
       text2: "sample application."
+      micropost_feed: 'Micropost Feed'
   layouts:
     footer:
       txt1: "The"
@@ -63,6 +64,10 @@ en:
       save: "Save changes"
       change: "change"
       user_not_found: "User not found"
+      update_profile: "Update your profile"
+    show:
+      user_not_found: "User not found"
+      micropost: "Microposts"
     update:
       updated: "Profile updated"
     destroy:
@@ -97,3 +102,19 @@ en:
       pwd_reset_success: "Password has been reset."
     check_expiration:
       expired_email: "Password reset has expired."
+  microposts:
+    micropost:
+      posted: "Posted"
+      ago: "ago."
+      del: "Delete"
+      confirm: "Are you sure?"
+    create:
+      created: "Microposts created !"
+    destroy:
+        deleted: "Micropost deleted"
+  shared:
+    micropost_form:
+      compose: "Compose new micropost..."
+      post: "Post"
+    user_info:
+      view_profile: "View my profile"

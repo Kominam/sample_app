@@ -51,12 +51,24 @@ class UsersController < ApplicationController
     redirect_to users_path
   end
 
+  def following
+    @title = t ".following_tit"
+    @users = @user.following.paginate page: params[:page]
+    render :show_follow
+  end
+
+  def followers
+    @title = t ".follower_tit"
+    @users = @user.followers.paginate page: params[:page]
+    render :show_follow
+  end
+
   private
 
-    def user_params
-      params.require(:user).permit :name, :email, :password,
-                                   :password_confirmation
-    end
+  def user_params
+    params.require(:user).permit :name, :email, :password,
+                                 :password_confirmation
+  end
 
   def correct_user
     redirect_to root_path unless current_user? @user

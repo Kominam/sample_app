@@ -72,10 +72,21 @@ en:
       updated: "Profile updated"
     destroy:
       delete: "User deleted"
+    following:
+      following_tit: "Following"
+    followers:
+      follower_tit: "Followers"
     user:
       del: "Delete"
       del_confirm: "Are you sure?"
+    show_follow:
+      view_profile: "View my profile"
+      micropost: "Microposts:"
     login_confirm: "Please log in"
+    unfollow:
+      unfollow_btn: "Unfollow"
+    follow:
+      follow_btn: "Follow"
   sessions:
     new:
       login: "Log in"
@@ -118,3 +129,7 @@ en:
       post: "Post"
     user_info:
       view_profile: "View my profile"
+    stats:
+      following: "Following"
+      follower: "Followers"
+

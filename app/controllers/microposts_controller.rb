@@ -13,6 +13,11 @@ class MicropostsController < ApplicationController
     end
   end
 
+  def show
+    @micropost = Micropost.find_by id: params[:id]
+    @comment = @micropost.comments.order(created_at: :desc)
+  end
+
   def destroy
     @micropost.destroy
     flash[:success] = t ".deleted"

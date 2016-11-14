@@ -13,4 +13,8 @@
         method: :delete, data: {confirm: t(".confirm")} %>
     <% end %>
   </span>
+  <span >
+    <%= link_to " ", micropost_path(micropost), class: "glyphicon glyphicon-comment" %>
+    (<%= micropost.comments.count %> comments)
+  </span>
 </li>

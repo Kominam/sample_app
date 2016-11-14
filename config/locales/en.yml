@@ -122,7 +122,12 @@ en:
     create:
       created: "Microposts created !"
     destroy:
-        deleted: "Micropost deleted"
+      deleted: "Micropost deleted"
+    show:
+      posted: "Posted"
+      ago: "ago."
+      del: "Delete"
+      confirm: "Are you sure?"
   shared:
     micropost_form:
       compose: "Compose new micropost..."

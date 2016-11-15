@@ -1,2 +1,2 @@
-$('#comment').html("<%= j render @micropost.comments, micropost: @micropost, comment: @comment %>");
+$('.comment_<%= @micropost.id %>').html("<%= j render @micropost.comments, micropost: @micropost, comment: @comment %>");
 $('#comment_content_<%= @micropost.id %>').val('')

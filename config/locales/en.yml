@@ -128,6 +128,8 @@ en:
       ago: "ago."
       del: "Delete"
       confirm: "Are you sure?"
+      following: "Following"
+      follower: "Followers"
   shared:
     micropost_form:
       compose: "Compose new micropost..."

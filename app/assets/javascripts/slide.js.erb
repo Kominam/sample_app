@@ -1,5 +1,6 @@
-$(document).ready(function(){
-    $("button").click(function(){
-        $("#comment").slideToggle("slow");
-    });
+$(document).on('turbolinks:load', function() {
+  $("button").click(function(){
+    var tog = $(this).attr("id");
+    $("#comment_"+tog).slideToggle("slow");
+  });
 });

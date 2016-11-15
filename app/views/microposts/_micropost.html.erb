@@ -14,7 +14,33 @@
     <% end %>
   </span>
   <span >
-    <%= link_to " ", micropost_path(micropost), class: "glyphicon glyphicon-comment" %>
-    (<%= micropost.comments.count %> comments)
+    <%= link_to micropost_path(micropost), class: "btn btn-success" do %>
+      <i class="glyphicon glyphicon-comment"> <%= micropost.comments.count %>
+      comments</i>
+    <% end %>
+    <button id="<%= micropost.id %>" class="btn btn-warning glyphicon glyphicon-list"></button>
+    <div id="comment_<%= micropost.id %>" style="display: none;" class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <ul class="comment_<%= micropost.id %>">
+          <div class="microposts">
+            <% micropost.comments.each do |comment| %>
+              <li>
+                <%= link_to gravatar_for comment.user, size: 50 %>
+                <span><%= link_to comment.user.name %></span>
+                <span class="content"><%= comment.content %></span>
+                <span class="timestamp">
+                  commented <%= time_ago_in_words(comment.created_at) %></span>
+              </li>
+            <% end %>
+          </div>
+        </ul>
+        <p style="clear: both;">Add comment: </p>
+        <%= form_for [micropost, micropost.comments.build], remote: true do |f| %>
+        <%= f.text_area :content, class: "form-control",
+          placeholder: "Enter your comment", id: "comment_content_#{micropost.id}"%>
+        <%= f.submit "Comment", class: "btn btn-info" %>
+        <% end %>
+      </div>
+    </div>
   </span>
 </li>

@@ -1,7 +1,27 @@
-<div class="col-md-4">
-  <%= link_to gravatar_for @micropost.user, size: 50 %>
-  <span class="user"><%= link_to @micropost.user.name, @micropost.user %></span>
-</div>
+<aside class="col-md-4">
+  <section class="user_info">
+    <h1>
+      <%= gravatar_for @micropost.user %>
+      <%= @micropost.user.name %>
+    </h1>
+  </section>
+  <section class="stats">
+    <div class="stats">
+      <a href="<%= following_user_path @micropost.user %>">
+        <strong id="following" class="stat">
+          <%= @micropost.user.following.count %>
+        </strong>
+        <%= t ".following" %>
+      </a>
+      <a href="<%= followers_user_path @micropost.user %>">
+        <strong id="followers" class="stat">
+          <%= @micropost.user.followers.count%>
+        </strong>
+        <%= t ".follower" %>
+      </a>
+    </div>
+  </section>
+</aside>
 <div class="col-md-8">
   <span class="content">
     <p><%= @micropost.content %>
@@ -22,7 +42,7 @@
     <% end %>
   <% end %>
   <div>
-    <ul id="comment">
+    <ul class="comment_<%= @micropost.id %>">
       <%= render @comment %>
     </ul>
   </div>
